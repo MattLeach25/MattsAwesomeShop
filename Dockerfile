@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY /MattsAwesomeShop .
 
 ENTRYPOINT ["python"]
-CMD ["manage.py runserver"]
+CMD ["manage.py", "runserver"]
