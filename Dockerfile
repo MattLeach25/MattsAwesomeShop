@@ -1,12 +1,7 @@
-FROM python:3.11-slim
-ENV PORT 8000
-EXPOSE 8000
+FROM python:3.10
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir --system -r requirements.txt
 
 COPY /MattsAwesomeShop .
-
-ENTRYPOINT ["python"]
-CMD ["manage.py", "runserver"]
