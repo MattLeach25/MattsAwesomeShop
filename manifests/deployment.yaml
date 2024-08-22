@@ -19,7 +19,6 @@ spec:
       containers:
         - name: test
           image: acrworkflow1724319580806.azurecr.io/mattsawesomeshop:latest
-          command: ["python manage.py runserver"]
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
