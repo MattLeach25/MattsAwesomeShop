@@ -1,7 +1,11 @@
 FROM python:3.10
-WORKDIR /usr/src/app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN mkdir /code
 
-COPY /MattsAwesomeShop .
+WORKDIR /code
+
+COPY . /code/
+
+RUN pip install -r requirements.txt
+
+CMD python manage.py runserver 0.0.0.0:8000
