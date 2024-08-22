@@ -1,4 +1,9 @@
 name: test
+"on":
+    push:
+        branches:
+            - main
+    workflow_dispatch: {}
 env:
     ACR_RESOURCE_GROUP: aks
     AZURE_CONTAINER_REGISTRY: acrworkflow1724319580806
