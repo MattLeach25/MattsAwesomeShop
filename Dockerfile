@@ -4,8 +4,8 @@ RUN mkdir /code
 
 COPY . /code/
 
-WORKDIR /code/
+WORKDIR /code/MattsAwesomeShop
 
 RUN pip install -r requirements.txt
 CMD ls
-CMD python ./manage.py runserver 0.0.0.0:8000
+CMD python manage.py runserver 0.0.0.0:8000
